@@ -1,17 +1,17 @@
-# Lotto Number Generator
+# 로또 번호 생성기
 
-## Overview
+## 개요
 
-This is a simple web application that generates random lottery numbers.
+임의의 로또 번호를 생성하는 간단한 웹 애플리케이션입니다.
 
-## Features
+## 주요 기능
 
-*   Generates 6 unique random numbers between 1 and 45.
-*   Displays the generated numbers in a visually appealing way.
-*   Modern and responsive design.
+*   1부터 45 사이의 중복되지 않는 6개 번호 생성.
+*   생성된 번호를 시각적으로 보기 좋게 표시.
+*   현대적이고 반응형인 디자인.
 
-## Current Plan
+## 현재 계획
 
-*   **HTML:** Create the basic structure of the application with a title, a button to generate numbers, and a container to display the numbers.
-*   **CSS:** Style the application with a modern and visually appealing design. This will include styling the container, button, and the generated numbers.
-*   **JavaScript:** Implement the logic to generate 6 unique random numbers between 1 and 45 when the button is clicked and display them on the screen. A custom web component will be used to display the numbers.
+*   **HTML:** 제목, 번호 생성 버튼, 번호 표시 컨테이너를 포함한 애플리케이션의 기본 구조 생성.
+*   **CSS:** 현대적이고 시각적으로 매력적인 디자인 적용. 컨테이너, 버튼, 생성된 번호 공 스타일링 포함.
+*   **JavaScript:** 버튼 클릭 시 1~45 사이의 고유한 난수 6개를 생성하고 화면에 표시하는 로직 구현. 번호 표시는 사용자 정의 웹 컴포넌트(Custom Web Component) 사용.

@@ -1,33 +1,52 @@
+:root {
+    --bg-color: #f0f2f5;
+    --text-color: #333;
+    --container-bg: #ffffff;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --button-bg: #007bff;
+    --button-hover: #0056b3;
+}
+
+.dark-mode {
+    --bg-color: #1a1a1a;
+    --text-color: #f0f0f0;
+    --container-bg: #2d2d2d;
+    --shadow-color: rgba(0, 0, 0, 0.5);
+    --button-bg: #375a7f;
+    --button-hover: #4b78a9;
+}
 
 body {
     font-family: 'Helvetica Neue', sans-serif;
-    background-color: #f0f2f5;
-    background-image: subtle-noise;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .container {
-    background-color: #ffffff;
+    background-color: var(--container-bg);
     padding: 40px;
     border-radius: 16px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 25px var(--shadow-color);
     text-align: center;
     width: 90%;
     max-width: 500px;
+    transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 h1 {
-    color: #333;
+    color: var(--text-color);
     font-size: 2.5rem;
     margin-bottom: 20px;
 }
 
 #generate {
-    background-color: #007bff;
+    background-color: var(--button-bg);
     color: white;
     border: none;
     padding: 15px 30px;
@@ -39,8 +58,27 @@ h1 {
 }
 
 #generate:hover {
-    background-color: #0056b3;
+    background-color: var(--button-hover);
     box-shadow: 0 6px 20px rgba(0, 123, 255, 0.3);
+}
+
+#theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: 2px solid var(--text-color);
+    color: var(--text-color);
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+#theme-toggle:hover {
+    background-color: var(--text-color);
+    color: var(--container-bg);
 }
 
 #numbers-container {
@@ -49,17 +87,4 @@ h1 {
     flex-wrap: wrap;
     gap: 15px;
     margin-top: 30px;
-}
-
-lotto-ball {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: white;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }

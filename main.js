@@ -1,4 +1,3 @@
-
 class LottoBall extends HTMLElement {
     constructor() {
         super();
@@ -41,6 +40,7 @@ class LottoBall extends HTMLElement {
 
 customElements.define('lotto-ball', LottoBall);
 
+// Lotto Generation Logic
 document.getElementById('generate').addEventListener('click', () => {
     const numbersContainer = document.getElementById('numbers-container');
     numbersContainer.innerHTML = '';
@@ -55,4 +55,29 @@ document.getElementById('generate').addEventListener('click', () => {
         ball.setAttribute('number', number);
         numbersContainer.appendChild(ball);
     });
+});
+
+// Theme Toggle Logic
+const themeToggle = document.getElementById('theme-toggle');
+const body = document.body;
+
+// Check for saved theme preference
+const currentTheme = localStorage.getItem('theme');
+if (currentTheme === 'dark') {
+    body.classList.add('dark-mode');
+    themeToggle.textContent = 'Light Mode';
+}
+
+themeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    
+    let theme = 'light';
+    if (body.classList.contains('dark-mode')) {
+        theme = 'dark';
+        themeToggle.textContent = 'Light Mode';
+    } else {
+        themeToggle.textContent = 'Dark Mode';
+    }
+    
+    localStorage.setItem('theme', theme);
 });

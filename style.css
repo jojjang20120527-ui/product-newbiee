@@ -5,6 +5,8 @@
     --shadow-color: rgba(0, 0, 0, 0.1);
     --button-bg: #007bff;
     --button-hover: #0056b3;
+    --input-bg: #fff;
+    --input-border: #ccc;
 }
 
 .dark-mode {
@@ -14,6 +16,8 @@
     --shadow-color: rgba(0, 0, 0, 0.5);
     --button-bg: #375a7f;
     --button-hover: #4b78a9;
+    --input-bg: #3d3d3d;
+    --input-border: #555;
 }
 
 body {
@@ -23,8 +27,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
+    padding: 20px 0;
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -42,6 +47,11 @@ body {
 h1 {
     color: var(--text-color);
     font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.5rem;
     margin-bottom: 20px;
 }
 
@@ -87,4 +97,51 @@ h1 {
     flex-wrap: wrap;
     gap: 15px;
     margin-top: 30px;
+}
+
+/* Form Styles */
+#partnership {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--input-border);
+    border-radius: 4px;
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+#submit-btn {
+    width: 100%;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#submit-btn:hover {
+    background-color: #218838;
 }
